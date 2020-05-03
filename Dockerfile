@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+ARG DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get -qq update && apt-get install -y apt-utils
 RUN apt-get -y --no-install-recommends install build-essential vim python3 \
             python3-yaml python3-jinja2 pandoc ca-certificates dvipng xzdec \
